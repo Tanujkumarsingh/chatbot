@@ -10,6 +10,7 @@ llm = HuggingFaceEndpoint(
     repo_id="mistralai/Mistral-7B-Instruct-v0.2",  # ✅ Chat-compatible model
 )
 
+st.header("simple chat with HuggingFace model")
 userinput = st.text_input("enter the prompt")
 if st.button("generate response"):
     model = ChatHuggingFace(llm=llm)
